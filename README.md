@@ -6,6 +6,42 @@ Semestr Letni 2020/21 [@hbaniecki](https://github.com/hbaniecki)
 
 Przedmiot ten poświęcony jest tematyce badań naukowych. Na zajęciach skupimy się na odtwarzaniu wyników artykułów naukowych, tworzeniu nowych wyników, oraz napisaniu mini-artykułu. Tematem przewodnim projektu jest wykorzystanie modeli uczenia maszynowego do predykcji śmiertelności COVID-19. Poboczne tematy: wyjaśnianie modeli uczenia maszynowego, odporność modeli predykcyjnych i związana z nią odpowiedzialność, reprodukowalność wyników naukowych, pierwsze kroki w świecie badań naukowych.
 
+## Projekt
+
+Całość przedmiotu realizowana jest w zespołach 3-osobowych. 
+
+### Faza 1
+
+Pierwsza faza projektu polega na przeanalizowaniu artykułu naukowego, odtworzeniu jego wyników, a następnie zaproponowaniu nowych wyników np. przeprowadzenie analizy danych, stworzenie nowych modeli, wyjaśnienie modeli, przeanalizowanie odpowiedzi do analizowanego artykułu (odtworzenie ich wyników, wykorzystanie dodatkowych danych itp.). Całość powinna zostać udokumentowana w postaci kodu na GitHub oraz raportu - oceniane w dwóch krokach (<b>10 + 20 punktów</b>).
+
+Artykuł state-of-the-art (SOTA) w tematyce ML dla COVID-19:
+
+> Yan, L., Zhang, H., Goncalves, J. et al. "An interpretable mortality prediction model for COVID-19 patients." Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-0180-7
+
+Odpowiedzi do powyższego artykułu (Matters Arising):
+
+> Barish, M. et al. "External validation demonstrates limited clinical utility of the interpretable mortality prediction model for patients with COVID-19" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-00254-2
+
+> Quanjel, M. et al. "Replication of a mortality prediction model in Dutch patients with COVID-19" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-00253-3
+
+> Dupuis, C. et al. "Limited applicability of a COVID-19 specific mortality prediction rule to the intensive care setting" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-00252-4
+
+### Faza 2
+
+Druga faza projektu polega na przeprowadzeniu podobnej analizy, ale:
+
+- Każdy zespół pracuje z innym artykułem - jeżeli artykuł okaże się mało skomplikowany i/lub zespół szybko skończy analizę to można sięgać po pozostałe artykuły z puli.
+- Część projektu polega na porównaniu wyników/odniesieniu się do artykułu z **fazy 1**.
+- Całość powinna zostać udokumentowana w postaci mini-artykułu (razem z kodami na GitHub), w którym oprócz opisania wyników **fazy 2**, można opisać wyniki **fazy 1** - oceniane w dwóch krokach (<b>10 + 40 punktów</b>).
+- Zespół prezentuje najciekawsze wyniki projektu na koniec semestru (<b>20 punktów</b>).
+
+Przykładowe artykuły:
+
+- [Deep learning prediction of likelihood of ICU admission and mortality in COVID-19 patients using clinical variables](https://peerj.com/articles/10337)
+- [A Learning-Based Model to Evaluate Hospitalization Priority in COVID-19 Pandemics](https://www.cell.com/patterns/fulltext/S2666-3899(20)30120-3)
+- [Predicting Mortality Due to SARS-CoV-2: A Mechanistic Score Relating Obesity and Diabetes to COVID-19 Outcomes in Mexico](https://academic.oup.com/jcem/article/105/8/2752/5849337)
+- TBD
+
 ## Spotkania
 
 <table>
@@ -133,42 +169,6 @@ Przedmiot ten poświęcony jest tematyce badań naukowych. Na zajęciach skupimy
 </tbody>
 </table>
 
-## Projekt
-
-Całość przedmiotu realizowana jest w zespołach 3-osobowych. 
-
-### Faza 1
-
-Pierwsza faza projektu polega na przeanalizowaniu artykułu naukowego, odtworzeniu jego wyników, a następnie zaproponowaniu nowych wyników np. przeprowadzenie analizy danych, stworzenie nowych modeli, wyjaśnienie modeli, przeanalizowanie odpowiedzi do analizowanego artykułu (odtworzenie ich wyników, wykorzystanie dodatkowych danych itp.). Całość powinna zostać udokumentowana w postaci kodu na GitHub oraz raportu - oceniane w dwóch krokach (<b>10 + 20 punktów</b>).
-
-Artykuł state-of-the-art (SOTA) w tematyce ML dla COVID-19:
-
-> Yan, L., Zhang, H., Goncalves, J. et al. "An interpretable mortality prediction model for COVID-19 patients." Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-0180-7
-
-Odpowiedzi do powyższego artykułu (Matters Arising):
-
-> Barish, M. et al. "External validation demonstrates limited clinical utility of the interpretable mortality prediction model for patients with COVID-19" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-00254-2
-
-> Quanjel, M. et al. "Replication of a mortality prediction model in Dutch patients with COVID-19" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-00253-3
-
-> Dupuis, C. et al. "Limited applicability of a COVID-19 specific mortality prediction rule to the intensive care setting" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-00252-4
-
-
-### Faza 2
-
-Druga faza projektu polega na przeprowadzeniu podobnej analizy, ale:
-
-- Każdy zespół pracuje z innym artykułem - jeżeli artykuł okaże się mało skomplikowany i/lub zespół szybko skończy analizę to można sięgać po pozostałe artykuły z puli.
-- Część projektu polega na porównaniu wyników/odniesieniu się do artykułu z **fazy 1**.
-- Całość powinna zostać udokumentowana w postaci mini-artykułu (razem z kodami na GitHub), w którym oprócz opisania wyników **fazy 2**, można opisać wyniki **fazy 1** - oceniane w dwóch krokach (<b>10 + 40 punktów</b>).
-- Zespół prezentuje najciekawsze wyniki projektu na koniec semestru (<b>20 punktów</b>).
-
-Przykładowe artykuły:
-
-- [Deep learning prediction of likelihood of ICU admission and mortality in COVID-19 patients using clinical variables](https://peerj.com/articles/10337)
-- [A Learning-Based Model to Evaluate Hospitalization Priority in COVID-19 Pandemics](https://www.cell.com/patterns/fulltext/S2666-3899(20)30120-3)
-- [Predicting Mortality Due to SARS-CoV-2: A Mechanistic Score Relating Obesity and Diabetes to COVID-19 Outcomes in Mexico](https://academic.oup.com/jcem/article/105/8/2752/5849337)
-- TBD
 
 ## Referencje
 
