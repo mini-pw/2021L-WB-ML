@@ -101,7 +101,7 @@ Przykładowe artykuły:
     <td>7</td>
     <td>08/04</td>
     <td>istotne artykuły z dziedziny ML dla COVID-19</td>
-    <td>zaawansowane metody exploracji modeli (modelStudio, Arena)</td>
+    <td>zaawansowane metody eksploracji modeli (modelStudio, Arena)</td>
     <td></td>
   </tr>
   <tr>
