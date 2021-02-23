@@ -14,7 +14,7 @@ Całość przedmiotu realizowana jest w zespołach 3-osobowych.
 
 Pierwsza faza projektu polega na przeanalizowaniu artykułu naukowego, odtworzeniu jego wyników, a następnie zaproponowaniu nowych wyników np. przeprowadzenie analizy danych, stworzenie nowych modeli, wyjaśnienie modeli, przeanalizowanie odpowiedzi do analizowanego artykułu (odtworzenie ich wyników, wykorzystanie dodatkowych danych itp.). Całość powinna zostać udokumentowana w postaci kodu na GitHub oraz raportu - oceniane w dwóch krokach (<b>10 + 20 punktów</b>).
 
-Artykuł state-of-the-art (SOTA) w tematyce ML dla COVID-19:
+Artykuł do analizy - state-of-the-art (SOTA) w tematyce ML dla COVID-19:
 
 > Yan, L. et al. "An interpretable mortality prediction model for COVID-19 patients" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-0180-7
 
@@ -35,7 +35,7 @@ Druga faza projektu polega na przeprowadzeniu podobnej analizy, ale:
 - Całość powinna zostać udokumentowana w postaci mini-artykułu (razem z kodami na GitHub), w którym oprócz opisania wyników **fazy 2**, można opisać wyniki **fazy 1** - oceniane w dwóch krokach (<b>10 + 40 punktów</b>).
 - Zespół prezentuje najciekawsze wyniki projektu na koniec semestru (<b>20 punktów</b>).
 
-Przykładowe artykuły:
+Artykuły do analizy:
 
 - [Deep learning prediction of likelihood of ICU admission and mortality in COVID-19 patients using clinical variables](https://peerj.com/articles/10337)
 - [A Learning-Based Model to Evaluate Hospitalization Priority in COVID-19 Pandemics](https://www.cell.com/patterns/fulltext/S2666-3899(20)30120-3)
