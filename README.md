@@ -16,15 +16,13 @@ Pierwsza faza projektu polega na przeanalizowaniu artykułu naukowego, odtworzen
 
 Artykuł do analizy - state-of-the-art (SOTA) w tematyce ML dla COVID-19:
 
-> Yan, L. et al. "An interpretable mortality prediction model for COVID-19 patients" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-0180-7
+> Yan, L. et al. "An interpretable mortality prediction model for COVID-19 patients" Nature Machine Intelligence (2020) https://www.nature.com/articles/s42256-020-0180-7
 
 Odpowiedzi do powyższego artykułu (Matters Arising):
 
-> Barish, M. et al. "External validation demonstrates limited clinical utility of the interpretable mortality prediction model for patients with COVID-19" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-00254-2
-
-> Quanjel, M. et al. "Replication of a mortality prediction model in Dutch patients with COVID-19" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-00253-3
-
-> Dupuis, C. et al. "Limited applicability of a COVID-19 specific mortality prediction rule to the intensive care setting" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-00252-4
+- [External validation demonstrates limited clinical utility of the interpretable mortality prediction model for patients with COVID-19](https://www.nature.com/articles/s42256-020-00254-2)
+- [Replication of a mortality prediction model in Dutch patients with COVID-19](https://www.nature.com/articles/s42256-020-00253-3)
+- [Limited applicability of a COVID-19 specific mortality prediction rule to the intensive care setting](https://www.nature.com/articles/s42256-020-00252-4)
 
 ### Faza 2
 
@@ -121,7 +119,7 @@ Artykuły do analizy:
   <tr>
     <td>10</td>
     <td>29/04</td>
-    <td colspan="2">TBD</td>
+    <td colspan="2">TBD (badania/ML)</td>
     <td></td>
   </tr>
   <tr>
@@ -133,7 +131,7 @@ Artykuły do analizy:
   <tr>
     <td>12</td>
     <td>12/05</td>
-    <td colspan="2">TBD</td>
+    <td colspan="2">TBD (badania/ML)</td>
     <td></td>
   </tr>
   <tr>
@@ -157,7 +155,7 @@ Artykuły do analizy:
   <tr>
     <td>12'</td>
     <td>28/05</td>
-    <td colspan="2">TBD</td>
+    <td colspan="2">TBD (badania/ML)</td>
     <td></td>
   </tr>
   <tr>
@@ -172,9 +170,11 @@ Artykuły do analizy:
 
 ## Bibliografia
 
-- Baniecki, H., and Biecek, P. "Responsible Prediction Making of COVID-19 Mortality (Student Abstract)" Proceedings of the AAAI Conference on Artificial Intelligence (2021) https://www.aaai.org/AAAI21Papers/SA-299.BanieckiH.pdf
-- Wynants, L. et al. "Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal" BMJ (2020) https://www.bmj.com/content/369/bmj.m1328
-- Barredo Arrieta, A. et al. "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI" Information Fusion (2020) https://www.sciencedirect.com/science/article/pii/S1566253519308103
+> Baniecki, H., and Biecek, P. "Responsible Prediction Making of COVID-19 Mortality (Student Abstract)" Proceedings of the AAAI Conference on Artificial Intelligence (2021) https://www.aaai.org/AAAI21Papers/SA-299.BanieckiH.pdf
+
+> Wynants, L. et al. "Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal" BMJ (2020) https://www.bmj.com/content/369/bmj.m1328
+
+> Barredo Arrieta, A. et al. "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI" Information Fusion (2020) https://www.sciencedirect.com/science/article/pii/S1566253519308103
 
 ## Materiały
 
