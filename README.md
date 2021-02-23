@@ -16,7 +16,7 @@ Pierwsza faza projektu polega na przeanalizowaniu artykułu naukowego, odtworzen
 
 Artykuł state-of-the-art (SOTA) w tematyce ML dla COVID-19:
 
-> Yan, L., Zhang, H., Goncalves, J. et al. "An interpretable mortality prediction model for COVID-19 patients." Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-0180-7
+> Yan, L. et al. "An interpretable mortality prediction model for COVID-19 patients" Nature Machine Intelligence (2020). https://www.nature.com/articles/s42256-020-0180-7
 
 Odpowiedzi do powyższego artykułu (Matters Arising):
 
@@ -170,8 +170,10 @@ Przykładowe artykuły:
 </table>
 
 
-## Referencje
+## Bibliografia
 
+- Wynants, L. et al. "Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal" BMJ (2020) https://www.bmj.com/content/369/bmj.m1328
+- Barredo Arrieta, A. et al. "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI" Information Fusion (2020) https://www.sciencedirect.com/science/article/pii/S1566253519308103
 - TBD
 
 ## Materiały
