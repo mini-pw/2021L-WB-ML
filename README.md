@@ -178,7 +178,7 @@ Artykuły do analizy:
 
 ## Materiały
 
-- wyjaśnianie (predykcyjnych) modeli uczenia maszynowego: [Explanatory Model Analysis](https//ema.drwhy.ai), [dalex](https://dalex.drwhy.ai/), [Arena](https://arena.drwhy.ai/docs/), [modelStudio](https://modelstudio.drwhy.ai/) 
+- wyjaśnianie (predykcyjnych) modeli uczenia maszynowego: [Explanatory Model Analysis](https://ema.drwhy.ai), [dalex](https://dalex.drwhy.ai/), [Arena](https://arena.drwhy.ai/docs/), [modelStudio](https://modelstudio.drwhy.ai/) 
 - bazy preprintów: [arXiv](https://arxiv.org/), ['arXiv for med'](https://medrxiv.org/), ['arXiv for bio'](https://biorxiv.org)
 - bazy konferencji/czasopism: [CORE ranking](https://www.core.edu.au/conference-portal), [Scopus](https://www.scopus.com/)
 - baza [papers with code](https://paperswithcode.com/)
