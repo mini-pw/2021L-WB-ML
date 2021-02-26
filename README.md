@@ -191,6 +191,7 @@ Artykuły do analizy:
 
 * AUPRC
 * SVM (obrona)
+* [YK](https://www.youtube.com/c/YannicKilcher)
 * ...
 
 </details>
