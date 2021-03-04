@@ -8,7 +8,7 @@ Przedmiot ten poświęcony jest tematyce badań naukowych. Na zajęciach skupimy
 
 ## Projekt
 
-Całość przedmiotu realizowana jest w zespołach 3-osobowych. 
+Całość przedmiotu realizowana jest w zespołach 3/4-osobowych. 
 
 ### Faza 1
 
@@ -70,15 +70,14 @@ Artykuły do analizy:
   <tr>
     <td>3</td>
     <td>11/03</td>
-    <td>wyjaśnialne i odpowiedzialne uczenie maszynowe</td>
-    <td>metody wyjaśniania Ceteris Paribus & Partial Dependence Plot</td>
+    <td colspan="2">wyjaśnialne uczenie maszynowe (Break Down, Feature Importance, Ceteris Paribus, Partial Dependence Plot)</td>
     <td></td>
   </tr>
   <tr>
     <td>4</td>
     <td>18/03</td>
     <td><b>faza 1</b> omówienie wstępnych wyników</td>
-    <td>metody wyjaśniania Feature Importance & Break Down</td>
+    <td>odpowiedzialne uczenie maszynowe (Responsible AI)</td>
     <td>raport v1 (<b>10 pkt</b>)</td>
   </tr>
   <tr>
