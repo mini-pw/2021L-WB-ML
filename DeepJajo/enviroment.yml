@@ -12,3 +12,5 @@ dependencies:
   - xlrd==1.1.0
   - scipy
   - joblib
+  - pyarrow
+  - fastparquet
