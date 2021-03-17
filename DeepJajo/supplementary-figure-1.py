@@ -2,10 +2,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import xgboost as xgb
 import pandas as pd
-from sklearn.model_selection import train_test_split
 import numpy as np
+from sklearn.model_selection import train_test_split, StratifiedKFold
+from sklearn.metrics import roc_auc_score, roc_curve, auc, f1_score
 
-### Data read and split
+
 def data_read_and_split(is_dropna=False,sub_cols=None):
     # data_df_unna为375数据集，data_pre_df为110数据集
     data_df_unna,data_pre_df = data_preprocess()
@@ -34,7 +35,6 @@ def data_read_and_split(is_dropna=False,sub_cols=None):
     Y_data = data_df_unna[y_col]
     return X_data,Y_data,x_col
 
-## calculate miss values by col
 def col_miss(train_df):
     col_missing_df = train_df.isnull().sum(axis=0).reset_index()
     col_missing_df.columns = ['col','missing_count']
@@ -105,13 +105,37 @@ def merge_data_by_sliding_window(data, n_days=1, dropna=True, subset=None, time_
         data = data.drop(columns=['RE_DATE'])
     return data
 
-def supplementary_figure_1():
-    X_data_all_features,Y_data,x_col = data_read_and_split()
+def StratifiedKFold_func_with_features_sel(x, y,Num_iter=100,score_type = 'auc'):
+    acc_v = []
+    acc_t = []
+    for i in range(Num_iter):
+        skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=i)
+        for tr_idx, te_idx in skf.split(x,y):
+            x_tr = x[tr_idx, :]
+            y_tr = y[tr_idx]
+            x_te = x[te_idx, :]
+            y_te = y[te_idx]
+            model = xgb.XGBClassifier(max_depth=4,learning_rate=0.2,reg_alpha=1)
+            model.fit(x_tr, y_tr)
+            pred = model.predict(x_te)
+            train_pred = model.predict(x_tr)
+            if score_type == 'auc':
+                acc_v.append(roc_auc_score(y_te, pred))
+                acc_t.append(roc_auc_score(y_tr, train_pred))
+            else:
+                acc_v.append(f1_score(y_te, pred))
+                acc_t.append(f1_score(y_tr, train_pred))    
+    return [np.mean(acc_t), np.mean(acc_v), np.std(acc_t), np.std(acc_v)]
+
+def supplementary_figure_1(X_data_all_features,Y_data,x_col):
+    # X_data_all_features,Y_data,x_col = data_read_and_split()
     import_feature = pd.DataFrame()
     import_feature['col'] = x_col
     import_feature['xgb'] = 0
     for i in range(100):
         x_train, x_test, y_train, y_test = train_test_split(X_data_all_features, Y_data, test_size=0.3, random_state=i)
+        
+        ### ‘Multi-tree XGBoost algorithm’
         model = xgb.XGBClassifier(
                 max_depth=4
                 ,learning_rate=0.2
@@ -120,6 +144,7 @@ def supplementary_figure_1():
                 ,subsample = 0.9
                 ,colsample_bytree = 0.9)
         model.fit(x_train, y_train)
+        
         import_feature['xgb'] = import_feature['xgb']+model.feature_importances_/100
     import_feature = import_feature.sort_values(axis=0, ascending=False, by='xgb')
     print('Top 10 features:')
@@ -138,5 +163,37 @@ def supplementary_figure_1():
     sns.despine() 
     plt.show()
 
+    return import_feature
+
+def table3_supplementary_figure_2(X_data_all_features, Y_data, feature_sorted_by_importance):
+    import_feature_cols= feature_sorted_by_importance['col'].values[:10]
+    num_i = 1
+    val_score_old = 0
+    val_score_new = 0
+    results = pd.DataFrame(columns=["Features","AUC train", "AUC train std", "AUC validation", "AUC validation std"])
+    while val_score_new >= val_score_old:
+        val_score_old = val_score_new
+        x_col = import_feature_cols[:num_i]
+        X_data = X_data_all_features[x_col]#.values
+        print('\n5-Fold CV for top',num_i,'features:', x_col)
+        acc_train, acc_val, acc_train_std, acc_val_std = StratifiedKFold_func_with_features_sel(X_data.values,Y_data.values)
+        results = results.append({"Features":x_col,
+                        "AUC train":acc_train,
+                         "AUC train std":acc_train_std,
+                         "AUC validation":acc_val,
+                         "AUC validation std":acc_val_std},
+                         ignore_index=True)
+        print("Train AUC-score is %.4f ; Validation AUC-score is %.4f" % (acc_train,acc_val))
+        print("Train AUC-score-std is %.4f ; Validation AUC-score-std is %.4f" % (acc_train_std,acc_val_std))
+        val_score_new = acc_val
+        num_i += 1
+        print(results)
+    print('\nSelected features:',x_col[:-1])
+    
+    return list(x_col[:-1])
+
+
 if __name__ == '__main__':
-    supplementary_figure_1()
+    X_data_all_features,Y_data,x_col = data_read_and_split()
+    feature_sorted_by_importance = supplementary_figure_1(X_data_all_features,Y_data,x_col)
+    selected_features = table3_supplementary_figure_2(X_data_all_features,Y_data,feature_sorted_by_importance)
