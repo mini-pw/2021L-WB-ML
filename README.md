@@ -82,7 +82,7 @@ Artykuły do analizy:
   <tr>
     <td>5</td>
     <td>25/03</td>
-    <td colspan="2">problem reprodukowalności artykułów, Responsible AI, pierwsze kroki w badaniach naukowych (konferencje, granty, software, bazy) </td>
+    <td colspan="2">problem reprodukowalności artykułów, odpowiedzialne uczenie maszynowe, pierwsze kroki w badaniach naukowych (konferencje, granty, software, bazy) </td>
     <td></td>
   </tr>
   <tr>
