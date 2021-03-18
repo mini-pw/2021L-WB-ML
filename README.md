@@ -76,15 +76,13 @@ Artykuły do analizy:
   <tr>
     <td>4</td>
     <td>18/03</td>
-    <td><b>faza 1</b> omówienie wstępnych wyników</td>
-    <td>odpowiedzialne uczenie maszynowe (Responsible AI)</td>
+    <td colspan="2"><b>faza 1</b> omówienie wstępnych wyników</td>
     <td>raport v1 (<b>10 pkt</b>)</td>
   </tr>
   <tr>
     <td>5</td>
     <td>25/03</td>
-    <td>pierwsze kroki w badaniach naukowych (konferencje, granty, software, bazy) </td>
-    <td>problem reprodukowalności artykułów, kodu, modeli</td>
+    <td colspan="2">problem reprodukowalności artykułów, odpowiedzialne uczenie maszynowe (Responsible AI), pierwsze kroki w badaniach naukowych (konferencje, granty, software, bazy) </td>
     <td></td>
   </tr>
   <tr>
