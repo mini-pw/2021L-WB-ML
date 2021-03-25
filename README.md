@@ -82,23 +82,22 @@ Artykuły do analizy:
   <tr>
     <td>5</td>
     <td>25/03</td>
-    <td>problem reprodukowalności artykułów, odpowiedzialne uczenie maszynowe</td>
-    <td>pierwsze kroki w badaniach naukowych (konferencje, granty, software, bazy)</td>
+    <td colspan="2">SHAP, Responsible AI (fairness, h-c xai, security)</td>
     <td></td>
   </tr>
   <tr>
     <td>6</td>
     <td>01/04</td>
-    <td><b>faza 1</b> przedstawienie wyników</td>
-    <td><b>faza 2</b> zadanie artykułów do analizy</td>
-    <td>raport v2 (<b>20 pkt</b>)</td>
+    <td>istotne artykuły z dziedziny ML dla COVID-19</td>
+    <td>zaawansowane metody eksploracji modeli (modelStudio, Arena)</td>
+    <td></td>
   </tr>
   <tr>
     <td>7</td>
     <td>08/04</td>
-    <td>istotne artykuły z dziedziny ML dla COVID-19</td>
-    <td>zaawansowane metody eksploracji modeli (modelStudio, Arena)</td>
-    <td></td>
+    <td><b>faza 1</b> przedstawienie wyników</td>
+    <td><b>faza 2</b> zadanie artykułów do analizy</td>
+    <td>raport v2 (<b>20 pkt</b>)</td>
   </tr>
   <tr>
     <td>8</td>
@@ -153,7 +152,7 @@ Artykuły do analizy:
   <tr>
     <td>12'</td>
     <td>28/05</td>
-    <td colspan="2">TBD (badania/ML)</td>
+    <td colspan="2">*</td>
     <td></td>
   </tr>
   <tr>
