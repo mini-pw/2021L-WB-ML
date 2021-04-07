@@ -124,11 +124,11 @@ def read_train_data(path_train):
 
 
 def data_preprocess():
-    path_train = './data/time_series_375_prerpocess.xlsx'  # to_ml
+    path_train = '../data/time_series_375_prerpocess.xlsx'  # to_ml
     data_df_unna = read_train_data(path_train)
 
     # data_pre_df = pd.read_csv('./data/sample29_v3.csv',encoding='gbk')
-    data_pre_df = pd.read_excel('./data/time_series_test_110_preprocess.xlsx', index_col=[0, 1])
+    data_pre_df = pd.read_excel('../data/time_series_test_110_preprocess.xlsx', index_col=[0, 1])
     data_pre_df = merge_data_by_sliding_window(data_pre_df, n_days=1, dropna=True, subset=top3_feats_cols,
                                                      time_form='diff')
     data_pre_df = data_pre_df.groupby('PATIENT_ID').first().reset_index()
