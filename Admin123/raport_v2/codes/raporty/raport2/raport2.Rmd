@@ -1,0 +1,250 @@
+---
+title: "WB Raport 2"
+output: 
+  pdf_document:
+    fig_caption: yes
+author:
+  - Konrad Komisarczyk
+  - Kacper Grzymkowski
+  - Jakub Fołtyn
+bibliography: citations.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r load, include=FALSE}
+source("ppv_graphs.R")
+source("freqpoly.R")
+```
+
+# Analysis of responses
+After reading the responses to [@yan_interpretable_2020] we decided to look for reasons why the model doesn't work and maybe try to rebuild the model to work on external data.
+We have however found that such a model would likely have to be significantly more complicated and less interpretable.
+
+## Genetic differences
+Several studies have considered Lactate Dehydrogenase as a possible prognostic tool. 
+In cancer research, a meta-analysis has found a significant genetic difference in LDH expression between Asian and Caucasian ethnicities  [@lv_prognostic_2019].
+Early COVID studies also have found significantly higher mortality rates than what was observed later in the pandemic. [@wu_clinical_2020] 
+This might be one of the reasons for the model performing poorly. 
+
+## Triage tool
+Another reason for the model's poor performance could be it's improper usage as a triage tool.
+In the Outcomerea dataset, the sample excluded the healthiest patients and the most severely ill patients, which will naturally lower the effectiveness of the model [@dupuis_limited_2021]. 
+
+## Imbalanced tree model
+A more technical explanation is the imbalanced decision tree being too trusting of LDH readings.
+Perhaps balancing the right side of the tree could help with creating a more robust model.
+
+
+\newpage
+# EDA
+We have decided to take a closer look at patient data from 4 different sources, the original dataset on which the model was trained as well as the dataset from the 3 responses to the article:
+
+* Tongji hospital [@yan_interpretable_2020]
+* Outcomerea database [@dupuis_limited_2021]
+* St. Antonius hospital [@quanjel_replication_2021]
+* Northwell database [@barish_external_2021]
+
+## Histograms and PPV
+We really liked the visualization from [@barish_external_2021] as it demonstrated the primary reason of the poor performance of the original model.
+The result wasn't compared to the Tongji data that Yan trained their models on. 
+We decided to compare the distributions of patients from the two hospitals - Tongji, on which the original model was trained and Northwell, where the model was observed to have poor performance, as well as Outcomerea and St. Antonius, to which we have access.
+
+```{r hist_ppv1, message=FALSE, warning=FALSE, fig.height=3.5}
+recreate_ppv_hist("Tongji_375_CN")
+recreate_ppv_hist("Northwell_US")
+
+```
+
+The data we were provided doesn't recreate the figure in the article.
+We aren't sure why that is. Perhaps we misunderstood the figure presented or we were given a smaller sample of the dataset.
+Whatever the reason, it's clear that the distributions are different. 
+Particularly interesting is the large number of surviving, low LDH patients from Tongji data.
+In the Northwell dataset, survivors are more spread out.
+This is the primary cause of the poor performance of the model and the reported high rate of False Positives.
+
+\newpage
+```{r hist_ppv2, message=F, warning=F, fig.height=3.5}
+recreate_ppv_hist("Outcomerea_FR", scale_factor = 50)
+recreate_ppv_hist("St_Antonius_NL", scale_factor = 50)
+
+```
+We also decided to look at the Outcomerea and St. Antonius data through the same lens.
+The small size of these datasets makes these plots difficult to interpret.
+Even so, these plots highlight the differences in distributions and the limited predictive ability of lactate dehydrogenase biomarker.
+One likely cause is the exclusion of worst outcome patients and best outcome patients.
+
+
+\newpage
+
+### Frequency polygons 
+```{r freq, message=FALSE, warning=FALSE, fig.height=8, fig.width=7}
+draw_freqpoly("Tongji_375_CN", "hsCRP_last") /
+draw_freqpoly("Outcomerea_FR", "hsCRP_last") /
+draw_freqpoly("St_Antonius_NL", "hsCRP_last") 
+
+```
+We also created density plots for other features, however the interpretation is similar to the LDH histograms.
+Tongji data when split by negative outcome has a "fat tail" that starts above a certain threshold.
+Data from other sources is more evenly distributed. 
+It may be possible to split the distributions using a simple decision rule, such a split might prove ineffective.
+
+\newpage
+
+## 3-dimensional scatter plots
+We have used plotly as a tool to create easily explorable 3D scatter plots of the 3 common biomarkers present in all 3 datasets. 
+They are available in the code repository as .html files (plot with Northwell data has to be generated due to data availability issues). 
+
+Examination of Tongji data led us to belief that it exhibits clustering behavior.
+Applying to all the features  a $\log(x) + 1$ transformation made the clusters even more visible.
+
+```{r tongji_scatter}
+render_image <- function(prefix, suf="_scatter.png") {knitr::include_graphics(normalizePath(paste0("screenshots/", prefix, suf)))}
+render_image("Tongji")
+```
+
+In further part of our work we test this hypothesis.
+
+This behavior is not present to such a degree in any other dataset.
+
+```{r st_antonius_scatter}
+render_image("St_Antonius_small")
+```
+
+St. Antonius dataset was particularly unclustered.
+Creating a decision boundary wouldn't be very simple.
+
+```{r northwell_scatter}
+render_image("Northwell_small")
+```
+
+Northwell dataset shows some clustering behavior. 
+Unlike the Tongji dataset, the boundary would have to go through the densest part of the plot.
+\newpage
+
+# Clustering Tongji data
+
+```{r tongji_cluster}
+render_image("Tongji_cluster")
+```
+We have ran a k-means algorithm on the original Tongji data. 
+The idea behind this experiment is to show that  even without labels the model can notice and create a decision boundary similar to the one in the article.
+This seems to be the case here, as there are no patients belonging to Cluster 2 who have also died and the majority of surviving patients belong to Cluster 2.
+This means that it shouldn't be surprising that models trained on this data perform well internally, but so poorly when validated with an external dataset.
+
+
+\newpage
+
+# XGBoost and decision tree
+
+Part of the criticism directed against [@yan_interpretable_2020] refered to the data used by authors. 
+Main concerns were that original model scored badly on outside data.
+Responses to the article delivered other datasets that can be used to train model addressing the same problem.
+We decided to combine data from Tongji, St. Antonius and Outcomerea and Northwell to build a decision tree repeating steps from the original article.
+Our aim was to achieve acceptable performance on all the used sets.
+
+## Feature selection
+
+Only common features of all combined sets were LDH, hsCRP and lymphocytes assays. Although, every set contained at least two measurements of each marker - first and last.
+
+We trained an XGBoost model and calculated feature importances to compare impact of first and last measurements on the model.
+Metrics of feature importance we used were mean of absolute values of SHAP values (@shap) and Gain. 
+SHAP based feature importance visualized below shows that for every marker last measurement had significantly greater impact on the model's prediction. Gain metric shows similar results. 
+
+
+```{r shap_importances}
+render_image("xgboost_shap.png", suf="")
+```
+
+
+We decided to keep only 3 most important features. 
+
+
+## Decision tree
+
+Using selected features we trained XGBoost models with different hyperparameters. Evaluation of their AUC scores led us to conclusion that a single decision tree scores comparably to larger models.
+Maximum AUC achieved was around $0.875$ what is a good result. A single tree of depth 4 scored $0.84$ and a tree of depth 3 scored $0.81$. Both of these are satisfactory scores, but we decided the difference was great enough to choose the deeper one.
+
+We checked the tree structure and the tree is balanced. Result does not rely on only one feature in any case.
+
+### Results at the combined set
+
+Below we show ROC curve for the decision tree tested on combined sets:
+
+```{r xgboost_1_all_auc}
+render_image("xgboost_1_all_auc.png", suf = "")
+```
+
+We decided to establish the threshold at $0.42$ it was the point maximalizing Sensitivity and Specificity sum.
+
+Now the confusion matrix looks like this:
+
+```{r xgboost_confm}
+render_image("xgboost_1_confm.png", suf = "")
+```
+
+Model achieved following metrics: 
+
+```
+Accuracy : 0.8
+Sensitivity : 0.79      
+Specificity : 0.81
+```
+
+### Results at the single sets
+
+We examined performance of the model at the data from each source individually. 
+On the data from Tongji and Northwell model scores were comparable to the scores on combined data.
+On the other side, performance on Outcomera and St. Antonius was close to random. Below we attach ROC curves for Outcomera and St.Antonius test sets respectively:
+
+```{r outcomera_roc_1}
+render_image("outcomera_roc_1.png", suf = "")
+```
+
+```{r antonius_roc_1}
+render_image("antonius_roc_1.png", suf = "")
+```
+
+
+## Increasing weights of observations
+
+To achieve satisfying scores on all the sets we increased weight of observations from Outcomera and St. Antonius in XGBoost training set.
+Trying different weights (increased $1.5, 2, 2.5, 3, 4$ times for chosen sets) and different tree depths ($3$ - $5$) we failed to develop a decision tree that would satisfy our assumed requirements of Accuracy $> 0.7$, Sensitivity $> 0.65$ and Specificity $> 0.65$ for both Outcomera and St. Antonius. Even training decision tree using only these two sets produced no acceptable results.
+
+## Conclusions and discussion
+
+We failed in our attempts to develop an interpretable decision tree model that would correctly classify patients from St. Antonius and Outcomera sets. 
+It is possible to build such a tree that will produce acceptable results when tested on the combination of all selected datasets. 
+
+If the aim is to create a dataset representing general population, our method of simply combining available data may 
+not be optimal. Balancing data by choosing some subsets of points from the sets is an option, but how to subset individual datasets has yet to be considered.
+
+What is more, due to the differences between populations of different regions, such as genetic differences linked to the ethnicity, independently fitted models may be needed.
+
+
+\newpage
+# SVM testing
+After examining 3D scatterplots for Tongji hospital, we decided that SVM might be a suitable model for that data.
+As expected, SVM trained on the original Tongji hospital data has produced particullary high scoring for both accuracy and precision.
+To compare, we also trained SVM on combined dataset, as well as on a dataset which excluded the Tongji hospital. The difference in shapes is best shown by ROC curves for data from Tongji hospital alone and for data excluding Tongji hospital.
+
+
+```{r combined_ROC}
+render_image("svm_combined_ROC.png", suf="")
+```
+
+```{r tongji_ROC}
+render_image("svm_tongji_ROC.png", suf="")
+```
+
+```{r svm_compare}
+render_image("svm_comparission.png", suf="")
+```
+
+
+\newpage
+
+# References
