@@ -2,6 +2,8 @@
 
 Semestr Letni 2020/21 [@hbaniecki](https://github.com/hbaniecki)
 
+## [WB-Book](https://mini-pw.github.io/2021L-WB-Book) / [GitHub](https://github.com/mini-pw/2021L-WB-Book)
+
 ## Opis
 
 Przedmiot ten poświęcony jest tematyce badań naukowych. Na zajęciach skupimy się na odtwarzaniu wyników artykułów naukowych, tworzeniu nowych wyników, oraz napisaniu mini-artykułu. Tematem przewodnim projektu jest wykorzystanie modeli uczenia maszynowego do predykcji śmiertelności COVID-19. Poboczne tematy: wyjaśnianie modeli uczenia maszynowego, odporność modeli predykcyjnych i związana z nią odpowiedzialność, reprodukowalność wyników naukowych, pierwsze kroki w świecie badań naukowych.
@@ -26,6 +28,8 @@ Odpowiedzi do powyższego artykułu (Matters Arising):
 
 ### Faza 2
 
+*(08/04): W drugiej fazie można kontynuować dotychczasowe analizy po zaplanowaniu dalszych prac z prowadzącym (15/04).*
+
 Druga faza projektu polega na przeprowadzeniu podobnej analizy, ale:
 
 - Każdy zespół pracuje z innym artykułem - jeżeli artykuł okaże się mało skomplikowany i/lub zespół szybko skończy analizę to można sięgać po pozostałe artykuły z puli.
@@ -38,7 +42,7 @@ Artykuły do analizy:
 - [Deep learning prediction of likelihood of ICU admission and mortality in COVID-19 patients using clinical variables](https://peerj.com/articles/10337)
 - [A Learning-Based Model to Evaluate Hospitalization Priority in COVID-19 Pandemics](https://www.cell.com/patterns/fulltext/S2666-3899(20)30120-3)
 - [Predicting Mortality Due to SARS-CoV-2: A Mechanistic Score Relating Obesity and Diabetes to COVID-19 Outcomes in Mexico](https://academic.oup.com/jcem/article/105/8/2752/5849337)
-- TBD
+- inny w tej samej tematyce (z danymi)
 
 ## Spotkania
 
@@ -95,22 +99,21 @@ Artykuły do analizy:
   <tr>
     <td>7</td>
     <td>08/04</td>
-    <td><b>faza 1</b> przedstawienie wyników</td>
-    <td><b>faza 2</b> zadanie artykułów do analizy</td>
+    <td colspan="2"><b>faza 1</b> przedstawienie wyników</td>
     <td>raport v2 (<b>20 pkt</b>)</td>
   </tr>
   <tr>
     <td>8</td>
     <td>15/04</td>
-    <td><b>faza 2</b> przedstawienie artykułów</td>
-    <td>pisanie artykułów (tytuł, zakończenie/wstęp, literatura)</td>
+    <td><b>faza 2</b> konsultacje - zaplanowanie dalszych prac</td>
+    <td>TabNet, AUPRC / gość</td>
     <td></td>
   </tr>
   <tr>
     <td>9</td>
     <td>22/04</td>
-    <td><b>faza 2</b> porównanie artykułów z tymi z <b>fazy 1</b></td>
-    <td>zaproszony gość (zastosowania uczenia maszynowego/wyjaśnialności)</td>
+    <td><b>faza 2</b> przedstawienie koncepcji / postępów</td>
+    <td>TabNet, AUPRC / gość</td>
     <td></td>
   </tr>
   <tr>
@@ -122,13 +125,13 @@ Artykuły do analizy:
   <tr>
     <td>11</td>
     <td>06/05</td>
-    <td colspan="2"><b>faza 2</b> przedstawienie wyników</td>
+    <td colspan="2"><b>faza 2</b> przedstawienie wstępnych wyników</td>
     <td>projekt v1 (<b>10 pkt</b>)</td>
   </tr>
   <tr>
     <td>12</td>
     <td>12/05</td>
-    <td colspan="2">TBD (badania/ML)</td>
+    <td colspan="2">*</td>
     <td></td>
   </tr>
   <tr>
@@ -140,7 +143,7 @@ Artykuły do analizy:
   <tr>
     <td>14</td>
     <td>20/05</td>
-    <td colspan="2"><b>faza 2</b> omówienie projektów</td>
+    <td colspan="2"><b>faza 2</b> omówienie końcowych wyników</td>
     <td>projekt v2</td>
   </tr>
   <tr>
@@ -187,10 +190,9 @@ Artykuły do analizy:
 <details>
 <summary><strong><em>warto wspomnieć</em></strong></summary>
 
-* AUPRC
-* SVM (obrona)
-* [YK](https://www.youtube.com/c/YannicKilcher)
 * [backpropagation](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
-* ...
+* AUPRC
+* [TabNet](https://github.com/dreamquark-ai/tabnet) [/ in R](https://github.com/mlverse/tabnet)
+* [YK](https://www.youtube.com/c/YannicKilcher)
 
 </details>
