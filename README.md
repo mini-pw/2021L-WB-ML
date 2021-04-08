@@ -1,8 +1,8 @@
-# [Warsztaty Badawcze](https://github.com/mini-pw/2021L-WarsztatyBadawcze) - Machine Learning (ML)
+# Warsztaty Badawcze - Machine Learning (ML)
 
 Semestr Letni 2020/21 [@hbaniecki](https://github.com/hbaniecki)
 
-## [WB-Book](https://mini-pw.github.io/2021L-WB-Book) / [GitHub](https://github.com/mini-pw/2021L-WB-Book)
+## [WB-Book (English)](https://mini-pw.github.io/2021L-WB-Book/machine-learning.html) / [Książka](https://github.com/mini-pw/2021L-WB-Book) / [Wykład](https://github.com/mini-pw/2021L-WarsztatyBadawcze)
 
 ## Opis
 
@@ -28,7 +28,7 @@ Odpowiedzi do powyższego artykułu (Matters Arising):
 
 ### Faza 2
 
-*(08/04): W drugiej fazie można kontynuować dotychczasowe analizy po zaplanowaniu dalszych prac z prowadzącym (15/04).*
+*(08/04) W drugiej fazie można kontynuować dotychczasowe analizy po zaplanowaniu dalszych prac z prowadzącym.*
 
 Druga faza projektu polega na przeprowadzeniu podobnej analizy, ale:
 
@@ -192,7 +192,7 @@ Artykuły do analizy:
 
 * [backpropagation](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
 * AUPRC
-* [TabNet](https://github.com/dreamquark-ai/tabnet) [/ in R](https://github.com/mlverse/tabnet)
+* [TabNet](https://github.com/dreamquark-ai/tabnet) / [in R](https://github.com/mlverse/tabnet)
 * [YK](https://www.youtube.com/c/YannicKilcher)
 
 </details>
