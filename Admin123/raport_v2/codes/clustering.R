@@ -119,18 +119,6 @@ ggplot(visualization_data_4, aes(x = lymphocytes_last, y = hsCRP_last, color = o
 
 
 
-# *** TODO ***
-# CLUSTERYZACJA POZOSTAŁYCH PODZBIORÓW NA 2
-# * USUNIĘCIE OUTLIERÓW
-# * PORÓWNANIE WYNIKÓW METRYKAMI DLA KLASFIKACJI
-# * WIZUALIZACJA 3D
-
-# CLUSTERYZACJA POŁĄCZENIA ZBIORÓW NA 4 - wykrycie 
-
-
-
-
-
 
 
 

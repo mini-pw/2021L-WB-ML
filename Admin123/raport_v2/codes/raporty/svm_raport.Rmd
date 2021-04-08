@@ -7,11 +7,11 @@ To compare, we also trained SVM on combined dataset, as well as on a dataset whi
 
 
 ```{r combined_ROC}
-render_image("svm_combined_ROC.png", suf="")
+render_image("ROC_combined.png", suf="")
 ```
 
 ```{r tongji_ROC}
-render_image("svm_tongji_ROC.png", suf="")
+render_image("ROC_trained_on_Tongji.png", suf="")
 ```
 
 ```{r svm_compare}

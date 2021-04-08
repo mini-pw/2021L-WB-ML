@@ -154,7 +154,10 @@ xgb_model_3 <- xgboost(data = as.matrix(x_train),
 
 
 # how does the tree look like
-xgboost.unify(xgb_model_3, x_train)$model
+unified <- xgboost.unify(xgb_model_3, x_train)
+
+unified$model
+xgb.plot.tree(model = xgb_model_3)
 
 # model performance
 
@@ -201,9 +204,9 @@ perfs$confm
 # FORTH MODEL - increasing weight of first two sets
 weights <- c(rep(2, times = nrow(train1)), 
              rep(2, times = nrow(train2)), 
-             rep(0, times = nrow(train3)), 
-             rep(0, times = nrow(train4)), 
-             rep(0, times = nrow(train5)))
+             rep(1, times = nrow(train3)), 
+             rep(1, times = nrow(train4)), 
+             rep(1, times = nrow(train5)))
 
 
 xgbMatrix <- xgb.DMatrix(as.matrix(x_train), 
@@ -212,13 +215,13 @@ xgbMatrix <- xgb.DMatrix(as.matrix(x_train),
 
 xgb_model_3 <- xgboost(data = xgbMatrix, 
                        label = y_train, 
-                       params = list(objective = "reg:squarederror", max_depth = 1), 
-                       nrounds = 4)
+                       params = list(objective = "reg:squarederror", max_depth = 5), 
+                       nrounds = 1)
 
 
 # model performance
 
-th <- 0.32
+th <- 0.47
 
 # all sets
 perfs <- performances(x_test_all, y_test_all, threshold_to_use = th)

@@ -131,9 +131,14 @@ Unlike the Tongji dataset, the boundary would have to go through the densest par
 render_image("Tongji_cluster")
 ```
 We have ran a k-means algorithm on the original Tongji data. 
-The idea behind this experiment is to show that  even without labels the model can notice and create a decision boundary similar to the one in the article.
+The idea behind this experiment is to show that even without labels the model can notice and create a decision boundary similar to the one in the article.
 This seems to be the case here, as there are no patients belonging to Cluster 2 who have also died and the majority of surviving patients belong to Cluster 2.
 This means that it shouldn't be surprising that models trained on this data perform well internally, but so poorly when validated with an external dataset.
+
+
+We have ran a k-means algorithm also on all the other datasets but only for Tongji classes were visible as clusters. Removing outliers and transforming data did not improve the result.
+
+
 
 
 \newpage
@@ -226,23 +231,24 @@ What is more, due to the differences between populations of different regions, s
 
 
 \newpage
-# SVM testing
+# SVM
 After examining 3D scatterplots for Tongji hospital, we decided that SVM might be a suitable model for that data.
 As expected, SVM trained on the original Tongji hospital data has produced particullary high scoring for both accuracy and precision.
 To compare, we also trained SVM on combined dataset, as well as on a dataset which excluded the Tongji hospital. The difference in shapes is best shown by ROC curves for data from Tongji hospital alone and for data excluding Tongji hospital.
 
 
 ```{r combined_ROC}
-render_image("svm_combined_ROC.png", suf="")
+render_image("ROC_combined.png", suf="")
 ```
 
 ```{r tongji_ROC}
-render_image("svm_tongji_ROC.png", suf="")
+render_image("ROC_trained_on_Tongji.png", suf="")
 ```
 
 ```{r svm_compare}
 render_image("svm_comparission.png", suf="")
 ```
+
 
 
 \newpage
