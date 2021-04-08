@@ -185,7 +185,7 @@ Artykuły do analizy:
 - [konferencje AI/ML](https://jackietseng.github.io/conference_call_for_paper/conferences.html) 
 - [wykaz czasopism i konferencji punktowanych](https://www.gov.pl/web/edukacja-i-nauka/nowy-rozszerzony-wykaz-czasopism-naukowych-i-recenzowanych-materialow-z-konferencji-miedzynarodowych) przez MEN
 - personal website/cv: [hugo](https://themes.gohugo.io/tags/personal), [al-folio](https://github.com/alshedivat/al-folio)
-- AutoML: [PyCaret](https://pycaret.org/automl/), [Microsoft Azure](https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml)
+- AutoML: [mljar](https://github.com/mljar/mljar-supervised), [PyCaret](https://pycaret.org/automl/), [Microsoft Azure](https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml)
 
 <details>
 <summary><strong><em>warto wspomnieć</em></strong></summary>
