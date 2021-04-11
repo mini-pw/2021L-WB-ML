@@ -105,8 +105,8 @@ Artykuły do analizy:
   <tr>
     <td>8</td>
     <td>15/04</td>
-    <td><b>faza 2</b> konsultacje - zaplanowanie dalszych prac</td>
     <td>TabNet, AUPRC / gość</td>
+    <td><b>faza 2</b> konsultacje - zaplanowanie dalszych prac</td>
     <td></td>
   </tr>
   <tr>
