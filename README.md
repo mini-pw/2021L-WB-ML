@@ -105,15 +105,15 @@ Artykuły do analizy:
   <tr>
     <td>8</td>
     <td>15/04</td>
-    <td>TabNet, AUPRC / gość</td>
+    <td>AUPRC, TabNet</td>
     <td><b>faza 2</b> konsultacje - zaplanowanie dalszych prac</td>
     <td></td>
   </tr>
   <tr>
     <td>9</td>
     <td>22/04</td>
+    <td>TBD (gość)</td>
     <td><b>faza 2</b> przedstawienie koncepcji / postępów</td>
-    <td>TabNet, AUPRC / gość</td>
     <td></td>
   </tr>
   <tr>
