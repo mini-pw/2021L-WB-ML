@@ -33,7 +33,7 @@ Odpowiedzi do powyższego artykułu (Matters Arising):
 Druga faza projektu polega na przeprowadzeniu podobnej analizy, ale:
 
 - Każdy zespół pracuje z innym artykułem - jeżeli artykuł okaże się mało skomplikowany i/lub zespół szybko skończy analizę to można sięgać po pozostałe artykuły z puli.
-- Część projektu polega na porównaniu wyników/odniesieniu się do artykułu z **fazy 1**.
+- Część projektu polega na porównaniu wyników lub/i metod lub/i odniesieniu się do artykułu z **fazy 1**.
 - Całość powinna zostać udokumentowana w postaci mini-artykułu (razem z kodami na GitHub), w którym oprócz opisania wyników **fazy 2**, można opisać wyniki **fazy 1** - oceniane w dwóch krokach (<b>10 + 40 punktów</b>).
 - Zespół prezentuje najciekawsze wyniki projektu na koniec semestru (<b>20 punktów</b>).
 
@@ -112,8 +112,8 @@ Artykuły do analizy:
   <tr>
     <td>9</td>
     <td>22/04</td>
-    <td>TBD (gość)</td>
-    <td><b>faza 2</b> przedstawienie koncepcji / postępów</td>
+    <td>guest: <a href=https://feinstein.northwell.edu/institutes-researchers/our-researchers/theodoros-zanos-phd>prof. Theodoros Zanos</a></td>
+    <td><b>faza 2</b> konsultacje - przedstawienie koncepcji</td>
     <td></td>
   </tr>
   <tr>
