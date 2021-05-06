@@ -1,6 +1,8 @@
-# [Warsztaty Badawcze](https://github.com/mini-pw/2021L-WarsztatyBadawcze) - Machine Learning (ML)
+# Warsztaty Badawcze - Machine Learning (ML)
 
 Semestr Letni 2020/21 [@hbaniecki](https://github.com/hbaniecki)
+
+## [WB-Book (English)](https://mini-pw.github.io/2021L-WB-Book/machine-learning.html) / [Książka](https://github.com/mini-pw/2021L-WB-Book) / [Wykład](https://github.com/mini-pw/2021L-WarsztatyBadawcze)
 
 ## Opis
 
@@ -26,10 +28,12 @@ Odpowiedzi do powyższego artykułu (Matters Arising):
 
 ### Faza 2
 
+*(08/04) W drugiej fazie można kontynuować dotychczasowe analizy po zaplanowaniu dalszych prac z prowadzącym.*
+
 Druga faza projektu polega na przeprowadzeniu podobnej analizy, ale:
 
 - Każdy zespół pracuje z innym artykułem - jeżeli artykuł okaże się mało skomplikowany i/lub zespół szybko skończy analizę to można sięgać po pozostałe artykuły z puli.
-- Część projektu polega na porównaniu wyników/odniesieniu się do artykułu z **fazy 1**.
+- Część projektu polega na porównaniu wyników lub/i metod lub/i odniesieniu się do artykułu z **fazy 1**.
 - Całość powinna zostać udokumentowana w postaci mini-artykułu (razem z kodami na GitHub), w którym oprócz opisania wyników **fazy 2**, można opisać wyniki **fazy 1** - oceniane w dwóch krokach (<b>10 + 40 punktów</b>).
 - Zespół prezentuje najciekawsze wyniki projektu na koniec semestru (<b>20 punktów</b>).
 
@@ -38,7 +42,7 @@ Artykuły do analizy:
 - [Deep learning prediction of likelihood of ICU admission and mortality in COVID-19 patients using clinical variables](https://peerj.com/articles/10337)
 - [A Learning-Based Model to Evaluate Hospitalization Priority in COVID-19 Pandemics](https://www.cell.com/patterns/fulltext/S2666-3899(20)30120-3)
 - [Predicting Mortality Due to SARS-CoV-2: A Mechanistic Score Relating Obesity and Diabetes to COVID-19 Outcomes in Mexico](https://academic.oup.com/jcem/article/105/8/2752/5849337)
-- TBD
+- inny w tej samej tematyce (z danymi)
 
 ## Spotkania
 
@@ -76,43 +80,40 @@ Artykuły do analizy:
   <tr>
     <td>4</td>
     <td>18/03</td>
-    <td><b>faza 1</b> omówienie wstępnych wyników</td>
-    <td>odpowiedzialne uczenie maszynowe (Responsible AI)</td>
+    <td colspan="2"><b>faza 1</b> omówienie wstępnych wyników</td>
     <td>raport v1 (<b>10 pkt</b>)</td>
   </tr>
   <tr>
     <td>5</td>
     <td>25/03</td>
-    <td>pierwsze kroki w badaniach naukowych (konferencje, granty, software, bazy) </td>
-    <td>problem reprodukowalności artykułów, kodu, modeli</td>
+    <td colspan="2">SHAP, Responsible AI (fairness, h-c xai, security)</td>
     <td></td>
   </tr>
   <tr>
     <td>6</td>
     <td>01/04</td>
-    <td><b>faza 1</b> przedstawienie wyników</td>
-    <td><b>faza 2</b> zadanie artykułów do analizy</td>
-    <td>raport v2 (<b>20 pkt</b>)</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>08/04</td>
     <td>istotne artykuły z dziedziny ML dla COVID-19</td>
     <td>zaawansowane metody eksploracji modeli (modelStudio, Arena)</td>
     <td></td>
   </tr>
   <tr>
+    <td>7</td>
+    <td>08/04</td>
+    <td colspan="2"><b>faza 1</b> przedstawienie wyników</td>
+    <td>raport v2 (<b>20 pkt</b>)</td>
+  </tr>
+  <tr>
     <td>8</td>
     <td>15/04</td>
-    <td><b>faza 2</b> przedstawienie artykułów</td>
-    <td>pisanie artykułów (tytuł, zakończenie/wstęp, literatura)</td>
+    <td>AUPRC, TabNet</td>
+    <td><b>faza 2</b> konsultacje - zaplanowanie dalszych prac</td>
     <td></td>
   </tr>
   <tr>
     <td>9</td>
     <td>22/04</td>
-    <td><b>faza 2</b> porównanie artykułów z tymi z <b>fazy 1</b></td>
-    <td>zaproszony gość (zastosowania uczenia maszynowego/wyjaśnialności)</td>
+    <td>guest: <a href=https://feinstein.northwell.edu/institutes-researchers/our-researchers/theodoros-zanos-phd>prof. Theodoros Zanos</a></td>
+    <td><b>faza 2</b> konsultacje - przedstawienie koncepcji</td>
     <td></td>
   </tr>
   <tr>
@@ -124,13 +125,13 @@ Artykuły do analizy:
   <tr>
     <td>11</td>
     <td>06/05</td>
-    <td colspan="2"><b>faza 2</b> przedstawienie wyników</td>
+    <td colspan="2"><b>faza 2</b> przedstawienie wstępnych wyników</td>
     <td>projekt v1 (<b>10 pkt</b>)</td>
   </tr>
   <tr>
     <td>12</td>
     <td>12/05</td>
-    <td colspan="2">TBD (badania/ML)</td>
+    <td colspan="2">*</td>
     <td></td>
   </tr>
   <tr>
@@ -142,7 +143,7 @@ Artykuły do analizy:
   <tr>
     <td>14</td>
     <td>20/05</td>
-    <td colspan="2"><b>faza 2</b> omówienie projektów</td>
+    <td colspan="2"><b>faza 2</b> omówienie końcowych wyników</td>
     <td>projekt v2</td>
   </tr>
   <tr>
@@ -154,7 +155,7 @@ Artykuły do analizy:
   <tr>
     <td>12'</td>
     <td>28/05</td>
-    <td colspan="2">TBD (badania/ML)</td>
+    <td colspan="2">*</td>
     <td></td>
   </tr>
   <tr>
@@ -184,15 +185,14 @@ Artykuły do analizy:
 - [konferencje AI/ML](https://jackietseng.github.io/conference_call_for_paper/conferences.html) 
 - [wykaz czasopism i konferencji punktowanych](https://www.gov.pl/web/edukacja-i-nauka/nowy-rozszerzony-wykaz-czasopism-naukowych-i-recenzowanych-materialow-z-konferencji-miedzynarodowych) przez MEN
 - personal website/cv: [hugo](https://themes.gohugo.io/tags/personal), [al-folio](https://github.com/alshedivat/al-folio)
-- AutoML: [PyCaret](https://pycaret.org/automl/), [Microsoft Azure](https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml)
+- AutoML: [mljar](https://github.com/mljar/mljar-supervised), [PyCaret](https://pycaret.org/automl/), [Microsoft Azure](https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml)
 
 <details>
 <summary><strong><em>warto wspomnieć</em></strong></summary>
 
-* AUPRC
-* SVM (obrona)
-* [YK](https://www.youtube.com/c/YannicKilcher)
 * [backpropagation](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
-* ...
+* AUPRC
+* [TabNet](https://github.com/dreamquark-ai/tabnet) / [in R](https://github.com/mlverse/tabnet)
+* [YK](https://www.youtube.com/c/YannicKilcher)
 
 </details>
