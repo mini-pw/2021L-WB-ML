@@ -137,7 +137,7 @@ Artykuły do analizy:
   <tr>
     <td>13</td>
     <td>13/05</td>
-    <td colspan="2">wskazówki do wyników projektu: mini-artykuł i prezentacja</td>
+    <td colspan="2">konsultacje</td>
     <td></td>
   </tr>
   <tr>
