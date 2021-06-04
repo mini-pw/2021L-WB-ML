@@ -16,7 +16,7 @@ Całość przedmiotu realizowana jest w zespołach 3/4-osobowych.
 
 Pierwsza faza projektu polega na przeanalizowaniu artykułu naukowego, odtworzeniu jego wyników, a następnie zaproponowaniu nowych wyników np. przeprowadzenie analizy danych, stworzenie nowych modeli, wyjaśnienie modeli, przeanalizowanie odpowiedzi do analizowanego artykułu (odtworzenie ich wyników, wykorzystanie dodatkowych danych itp.). Całość powinna zostać udokumentowana w postaci kodu na GitHub oraz raportu - oceniane w dwóch krokach (<b>10 + 20 punktów</b>).
 
-Artykuł do analizy - state-of-the-art (SOTA) w tematyce ML dla COVID-19:
+Dobry artykuł do analizy w tematyce ML dla COVID-19:
 
 > Yan, L. et al. "An interpretable mortality prediction model for COVID-19 patients" Nature Machine Intelligence (2020) https://www.nature.com/articles/s42256-020-0180-7
 
@@ -186,13 +186,7 @@ Artykuły do analizy:
 - [wykaz czasopism i konferencji punktowanych](https://www.gov.pl/web/edukacja-i-nauka/nowy-rozszerzony-wykaz-czasopism-naukowych-i-recenzowanych-materialow-z-konferencji-miedzynarodowych) przez MEN
 - personal website/cv: [hugo](https://themes.gohugo.io/tags/personal), [al-folio](https://github.com/alshedivat/al-folio)
 - AutoML: [mljar](https://github.com/mljar/mljar-supervised), [PyCaret](https://pycaret.org/automl/), [Microsoft Azure](https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml)
-
-<details>
-<summary><strong><em>warto wspomnieć</em></strong></summary>
-
-* [backpropagation](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
-* AUPRC
-* [TabNet](https://github.com/dreamquark-ai/tabnet) / [in R](https://github.com/mlverse/tabnet)
-* [YK](https://www.youtube.com/c/YannicKilcher)
-
-</details>
+- [backpropagation](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+- [AUPRC](https://stats.stackexchange.com/questions/338826/auprc-vs-auc-roc)
+- [TabNet](https://github.com/dreamquark-ai/tabnet) / [in R](https://github.com/mlverse/tabnet)
+- [YK](https://www.youtube.com/c/YannicKilcher)
