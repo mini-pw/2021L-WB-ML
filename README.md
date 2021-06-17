@@ -170,11 +170,11 @@ Artykuły do analizy:
 
 ## Bibliografia
 
-> Baniecki, H., and Biecek, P. "Responsible Prediction Making of COVID-19 Mortality (Student Abstract)" Proceedings of the AAAI Conference on Artificial Intelligence (2021) https://www.aaai.org/AAAI21Papers/SA-299.BanieckiH.pdf
+> Baniecki, H., and Biecek, P. (2021) "Responsible Prediction Making of COVID-19 Mortality (Student Abstract)" AAAI Conference on Artificial Intelligence (AAAI) https://ojs.aaai.org/index.php/AAAI/article/view/17874
 
-> Wynants, L. et al. "Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal" BMJ (2020) https://www.bmj.com/content/369/bmj.m1328
+> Wynants, L. et al. (2020) "Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal" BMJ https://www.bmj.com/content/369/bmj.m1328
 
-> Barredo Arrieta, A. et al. "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI" Information Fusion (2020) https://www.sciencedirect.com/science/article/pii/S1566253519308103
+> Barredo Arrieta, A. et al. (2020) "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI" Information Fusion https://www.sciencedirect.com/science/article/pii/S1566253519308103
 
 ## Materiały
 
